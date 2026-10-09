@@ -1,57 +1,80 @@
-# Bakery Web App
+.admin-page {
+  padding: 42px 0 64px;
+}
 
-A simple bakery ordering platform with a customer storefront and an admin dashboard that receives order notifications.
+.admin-header {
+  margin-bottom: 28px;
+}
 
-## Features
+.admin-header h2 {
+  font-size: clamp(2.4rem, 3vw, 4rem);
+  line-height: 0.95;
+}
 
-- Customer-facing storefront for bakery items
-- Add-to-cart ordering flow
-- Checkout form for name, phone, email and pickup time
-- Admin dashboard showing recent order notifications and all orders
-- Notifications update automatically on the admin panel
-- Clean responsive UI for desktop and mobile
+.admin-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 24px;
+}
 
-## Tech stack
+.panel {
+  background: linear-gradient(180deg, #fff 0%, #fff8f4 100%);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: 22px;
+  box-shadow: 0 20px 40px rgba(90, 52, 35, 0.05);
+}
 
-- Node.js
-- Express
-- Static HTML/CSS/JS frontend
-- JSON file storage for products, orders and notifications
+.panel-header h3 {
+  margin: 0 0 18px;
+  font-size: 1.5rem;
+  font-family: 'Cormorant Garamond', serif;
+}
 
-## Run locally
+.notification-list,
+.orders-list {
+  display: grid;
+  gap: 12px;
+}
 
-1. Install dependencies:
-   ```bash
-   npm install
-   ```
-2. Start the app:
-   ```bash
-   npm start
-   ```
-3. Open the app in a browser:
-   - Customer page: http://localhost:3000/
-   - Admin page: http://localhost:3000/admin.html
+.notification-item,
+.order-item {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 16px 18px;
+  background: rgba(255, 255, 255, 0.9);
+}
 
-## Folder structure
+.notification-item h4,
+.order-item h4 {
+  margin: 0 0 6px;
+  font-size: 1.08rem;
+}
 
-```text
-.
-├── data/
-│   ├── notifications.json
-│   ├── orders.json
-│   └── products.json
-├── public/
-│   ├── admin.html
-│   ├── admin.js
-│   ├── app.js
-│   ├── index.html
-│   ├── styles.css
-│   └── admin.css
-├── package.json
-├── server.js
-└── README.md
-```
+.notification-item p,
+.order-item p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
 
-## Notes
+.notification-meta,
+.order-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
 
-This app uses a lightweight JSON-store approach so it works without needing a database. It is designed for local development and demo use.
+.order-total {
+  color: var(--primary);
+  font-weight: 800;
+}
+
+@media (max-width: 860px) {
+  .admin-grid {
+    grid-template-columns: 1fr;
+  }
+}

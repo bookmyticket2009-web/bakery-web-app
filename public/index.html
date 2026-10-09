@@ -3,24 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Golden Crumb Bakery</title>
+    <title>Little Hearthe | Pure Eggless Fresh Home Baked</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="topbar">
       <div class="container nav-wrap">
-        <div class="brand">
-          <span class="brand-mark">G</span>
+        <div class="brand" aria-label="Little Hearthe home">
+          <span class="brand-mark">LH</span>
           <div>
-            <p class="eyebrow">Fresh daily</p>
-            <h1>Golden Crumb</h1>
+            <p class="eyebrow">Pure Eggless • Fresh Home Baked</p>
+            <h1>Little Hearthe</h1>
           </div>
         </div>
         <nav>
           <a href="#menu">Menu</a>
+          <a href="#about">Our Story</a>
           <a href="#cart">Cart</a>
           <a href="#checkout">Checkout</a>
           <a href="admin.html" class="admin-link">Admin</a>
@@ -31,33 +32,53 @@
     <main>
       <section class="hero">
         <div class="container hero-grid">
-          <div>
-            <p class="eyebrow accent">Baked with love</p>
-            <h2>Fresh pastry joy for every celebration.</h2>
+          <div class="hero-copy-wrap">
+            <p class="eyebrow accent">Freshly baked with love</p>
+            <h2>Pure eggless baked happiness for every family moment.</h2>
             <p class="hero-copy">
-              Order custom cakes, buttery pastries, cookies and artisan breads for pickup or surprise gifting.
+              Little Hearthe brings you handcrafted cakes, cookies, breads, and festive treats made with care,
+              purity, and the warmth of home baking.
             </p>
             <div class="hero-actions">
-              <a href="#menu" class="primary-btn">Order now</a>
-              <a href="admin.html" class="secondary-btn">View admin panel</a>
+              <a href="#menu" class="primary-btn">Order your favorites</a>
+              <a href="admin.html" class="secondary-btn">Admin dashboard</a>
             </div>
             <ul class="hero-meta">
-              <li>Fresh from oven</li>
-              <li>Pickup in 2 hours</li>
-              <li>Custom celebration cakes</li>
+              <li>100% eggless recipes</li>
+              <li>Freshly baked daily</li>
+              <li>Perfect for gifting</li>
             </ul>
           </div>
+
           <div class="hero-card">
             <div class="mini-card-top">
-              <span>Today’s favorite</span>
+              <span>Chef’s special</span>
               <strong>Chocolate Fudge</strong>
             </div>
-            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&q=80" alt="Chocolate cake" />
+            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&q=80" alt="Delicious chocolate cake from Little Hearthe" />
             <div class="mini-card-bottom">
-              <span>Premium dessert</span>
+              <span>Pure home baked</span>
               <strong>$42</strong>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section id="about" class="features container">
+        <div class="feature-card">
+          <div class="feature-icon">❤</div>
+          <h3>Made with care</h3>
+          <p>Every batch is lovingly prepared in small quantities to keep it fresh and wholesome.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🥚</div>
+          <h3>Pure eggless</h3>
+          <p>Thoughtfully made for people who prefer clean, eggless, comforting bakery treats.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🏡</div>
+          <h3>Fresh from home</h3>
+          <p>Food made the traditional way, with warmth, honest ingredients, and bakery love.</p>
         </div>
       </section>
 
@@ -65,7 +86,7 @@
         <div class="section-header">
           <div>
             <p class="eyebrow accent">Our menu</p>
-            <h3>Freshly baked favorites</h3>
+            <h3>Fresh favorites from our oven</h3>
           </div>
         </div>
         <div id="product-list" class="product-list"></div>
@@ -75,13 +96,13 @@
         <div class="section-header">
           <div>
             <p class="eyebrow accent">Your order</p>
-            <h3>Shopping cart</h3>
+            <h3>Shopping basket</h3>
           </div>
         </div>
         <div class="cart-layout">
           <div id="cart-items" class="cart-items"></div>
           <aside class="cart-summary">
-            <h4>Summary</h4>
+            <h4>Order summary</h4>
             <div class="summary-row">
               <span>Items</span>
               <span id="summary-count">0</span>
@@ -90,7 +111,7 @@
               <span>Total</span>
               <strong id="summary-total">$0.00</strong>
             </div>
-            <button id="clear-cart" class="secondary-btn full-width">Clear cart</button>
+            <button id="clear-cart" class="secondary-btn full-width" type="button">Clear cart</button>
           </aside>
         </div>
       </section>
@@ -107,7 +128,7 @@
           <div class="field-grid">
             <label>
               Full name
-              <input type="text" id="customerName" name="customerName" required placeholder="John Smith" />
+              <input type="text" id="customerName" name="customerName" required placeholder="Aisha Sharma" />
             </label>
             <label>
               Phone
@@ -115,7 +136,7 @@
             </label>
             <label>
               Email
-              <input type="email" id="email" name="email" placeholder="john@example.com" />
+              <input type="email" id="email" name="email" placeholder="aisha@example.com" />
             </label>
             <label>
               Pickup time
@@ -125,7 +146,7 @@
 
           <label>
             Special notes
-            <textarea id="notes" name="notes" rows="4" placeholder="Birthday message, allergy request, etc."></textarea>
+            <textarea id="notes" name="notes" rows="4" placeholder="Birthday message, allergy request, festive packaging, etc."></textarea>
           </label>
 
           <button type="submit" class="primary-btn submit-btn">Place order</button>
@@ -136,8 +157,11 @@
 
     <footer class="site-footer">
       <div class="container footer-wrap">
-        <p>Golden Crumb Bakery</p>
-        <p>© 2026</p>
+        <div>
+          <strong>Little Hearthe</strong>
+          <p>Pure Eggless • Fresh Home Baked</p>
+        </div>
+        <p>Crafted with love for every celebration.</p>
       </div>
     </footer>
 

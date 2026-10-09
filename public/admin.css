@@ -1,80 +1,57 @@
-.admin-page {
-  padding: 40px 0 60px;
-}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Little Hearthe Admin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav-wrap">
+        <div class="brand" aria-label="Little Hearthe admin">
+          <span class="brand-mark">LH</span>
+          <div>
+            <p class="eyebrow">Bakery admin</p>
+            <h1>Little Hearthe</h1>
+          </div>
+        </div>
+        <nav>
+          <a href="index.html">Customer view</a>
+          <a href="admin.html" class="admin-link">Notifications</a>
+        </nav>
+      </div>
+    </header>
 
-.admin-header {
-  margin-bottom: 28px;
-}
+    <main class="container admin-page">
+      <section class="admin-header">
+        <div>
+          <p class="eyebrow accent">Fresh orders</p>
+          <h2>Little Hearthe bakery dashboard</h2>
+        </div>
+      </section>
 
-.admin-header h2 {
-  margin: 0;
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(2.2rem, 3vw, 3.5rem);
-}
+      <div class="admin-grid">
+        <section class="panel">
+          <div class="panel-header">
+            <h3>Recent alerts</h3>
+          </div>
+          <div id="notification-list" class="notification-list"></div>
+        </section>
 
-.admin-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 24px;
-}
+        <section class="panel">
+          <div class="panel-header">
+            <h3>Customer orders</h3>
+          </div>
+          <div id="orders-list" class="orders-list"></div>
+        </section>
+      </div>
+    </main>
 
-.panel {
-  background: var(--panel);
-  border: 1px solid var(--line);
-  border-radius: 22px;
-  padding: 22px;
-  box-shadow: 0 20px 44px rgba(68, 38, 20, 0.04);
-}
-
-.panel-header h3 {
-  margin: 0 0 18px;
-  font-size: 1.35rem;
-}
-
-.notification-list,
-.orders-list {
-  display: grid;
-  gap: 12px;
-}
-
-.notification-item,
-.order-item {
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  padding: 16px 18px;
-  background: #fffdfb;
-}
-
-.notification-item h4,
-.order-item h4 {
-  margin: 0 0 6px;
-  font-size: 1.05rem;
-}
-
-.notification-item p,
-.order-item p {
-  margin: 0;
-  color: var(--muted);
-  line-height: 1.6;
-}
-
-.notification-meta,
-.order-meta {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-  margin-top: 8px;
-  color: var(--muted);
-  font-size: 0.8rem;
-}
-
-.order-total {
-  font-weight: 800;
-  color: var(--primary);
-}
-
-@media (max-width: 860px) {
-  .admin-grid {
-    grid-template-columns: 1fr;
-  }
-}
+    <script src="admin.js"></script>
+  </body>
+</html>
