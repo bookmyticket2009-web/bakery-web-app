@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Golden Crumb Bakery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav-wrap">
+        <div class="brand">
+          <span class="brand-mark">G</span>
+          <div>
+            <p class="eyebrow">Fresh daily</p>
+            <h1>Golden Crumb</h1>
+          </div>
+        </div>
+        <nav>
+          <a href="#menu">Menu</a>
+          <a href="#cart">Cart</a>
+          <a href="#checkout">Checkout</a>
+          <a href="admin.html" class="admin-link">Admin</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <p class="eyebrow accent">Baked with love</p>
+            <h2>Fresh pastry joy for every celebration.</h2>
+            <p class="hero-copy">
+              Order custom cakes, buttery pastries, cookies and artisan breads for pickup or surprise gifting.
+            </p>
+            <div class="hero-actions">
+              <a href="#menu" class="primary-btn">Order now</a>
+              <a href="admin.html" class="secondary-btn">View admin panel</a>
+            </div>
+            <ul class="hero-meta">
+              <li>Fresh from oven</li>
+              <li>Pickup in 2 hours</li>
+              <li>Custom celebration cakes</li>
+            </ul>
+          </div>
+          <div class="hero-card">
+            <div class="mini-card-top">
+              <span>Today’s favorite</span>
+              <strong>Chocolate Fudge</strong>
+            </div>
+            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&q=80" alt="Chocolate cake" />
+            <div class="mini-card-bottom">
+              <span>Premium dessert</span>
+              <strong>$42</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="menu" class="menu container">
+        <div class="section-header">
+          <div>
+            <p class="eyebrow accent">Our menu</p>
+            <h3>Freshly baked favorites</h3>
+          </div>
+        </div>
+        <div id="product-list" class="product-list"></div>
+      </section>
+
+      <section id="cart" class="container cart-block">
+        <div class="section-header">
+          <div>
+            <p class="eyebrow accent">Your order</p>
+            <h3>Shopping cart</h3>
+          </div>
+        </div>
+        <div class="cart-layout">
+          <div id="cart-items" class="cart-items"></div>
+          <aside class="cart-summary">
+            <h4>Summary</h4>
+            <div class="summary-row">
+              <span>Items</span>
+              <span id="summary-count">0</span>
+            </div>
+            <div class="summary-row total-row">
+              <span>Total</span>
+              <strong id="summary-total">$0.00</strong>
+            </div>
+            <button id="clear-cart" class="secondary-btn full-width">Clear cart</button>
+          </aside>
+        </div>
+      </section>
+
+      <section id="checkout" class="container checkout-block">
+        <div class="section-header">
+          <div>
+            <p class="eyebrow accent">Checkout</p>
+            <h3>Place your order</h3>
+          </div>
+        </div>
+
+        <form id="order-form" class="checkout-form">
+          <div class="field-grid">
+            <label>
+              Full name
+              <input type="text" id="customerName" name="customerName" required placeholder="John Smith" />
+            </label>
+            <label>
+              Phone
+              <input type="tel" id="phone" name="phone" required placeholder="(555) 123-4567" />
+            </label>
+            <label>
+              Email
+              <input type="email" id="email" name="email" placeholder="john@example.com" />
+            </label>
+            <label>
+              Pickup time
+              <input type="text" id="pickupTime" name="pickupTime" placeholder="Today at 5:30 PM" />
+            </label>
+          </div>
+
+          <label>
+            Special notes
+            <textarea id="notes" name="notes" rows="4" placeholder="Birthday message, allergy request, etc."></textarea>
+          </label>
+
+          <button type="submit" class="primary-btn submit-btn">Place order</button>
+          <p id="form-message" class="form-message" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>Golden Crumb Bakery</p>
+        <p>© 2026</p>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>

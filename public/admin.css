@@ -1,0 +1,80 @@
+.admin-page {
+  padding: 40px 0 60px;
+}
+
+.admin-header {
+  margin-bottom: 28px;
+}
+
+.admin-header h2 {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.2rem, 3vw, 3.5rem);
+}
+
+.admin-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 24px;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  padding: 22px;
+  box-shadow: 0 20px 44px rgba(68, 38, 20, 0.04);
+}
+
+.panel-header h3 {
+  margin: 0 0 18px;
+  font-size: 1.35rem;
+}
+
+.notification-list,
+.orders-list {
+  display: grid;
+  gap: 12px;
+}
+
+.notification-item,
+.order-item {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 16px 18px;
+  background: #fffdfb;
+}
+
+.notification-item h4,
+.order-item h4 {
+  margin: 0 0 6px;
+  font-size: 1.05rem;
+}
+
+.notification-item p,
+.order-item p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.notification-meta,
+.order-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.order-total {
+  font-weight: 800;
+  color: var(--primary);
+}
+
+@media (max-width: 860px) {
+  .admin-grid {
+    grid-template-columns: 1fr;
+  }
+}

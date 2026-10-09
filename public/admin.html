@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Golden Crumb Admin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav-wrap">
+        <div class="brand">
+          <span class="brand-mark">G</span>
+          <div>
+            <p class="eyebrow">Bakery admin</p>
+            <h1>Golden Crumb</h1>
+          </div>
+        </div>
+        <nav>
+          <a href="index.html">Customer view</a>
+          <a href="admin.html" class="admin-link">Notifications</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container admin-page">
+      <section class="admin-header">
+        <div>
+          <p class="eyebrow accent">Dashboard</p>
+          <h2>Order notifications</h2>
+        </div>
+      </section>
+
+      <div class="admin-grid">
+        <section class="panel">
+          <div class="panel-header">
+            <h3>Recent alerts</h3>
+          </div>
+          <div id="notification-list" class="notification-list"></div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-header">
+            <h3>New orders</h3>
+          </div>
+          <div id="orders-list" class="orders-list"></div>
+        </section>
+      </div>
+    </main>
+
+    <script src="admin.js"></script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "bakery-web-app",
+  "version": "1.0.0",
+  "description": "Bakery ordering web app with admin notifications",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": [
+    "bakery",
+    "shop",
+    "express",
+    "order-management"
+  ],
+  "author": "bookmyticket2009-web",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

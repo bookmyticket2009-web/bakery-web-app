@@ -1,0 +1,9 @@
+[
+  {
+    "id": 1,
+    "type": "new-order",
+    "title": "Bakery startup ready",
+    "message": "The bakery app is ready to receive orders.",
+    "timestamp": "2024-01-01T00:00:00.000Z"
+  }
+]
